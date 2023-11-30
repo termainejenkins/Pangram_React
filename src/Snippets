@@ -1,0 +1,23 @@
+// App.tsx
+import React, { useState } from 'react';
+import InputForm from './InputForm';
+import Result from './Result';
+
+function App() {
+    const [sentence, setSentence] = useState('');
+    const [isPangram, setIsPangram] = useState(false);
+
+    const checkPangram = () => {
+        setIsPangram(/* your existing logic for checking pangram */);
+    };
+
+    return (
+        <div>
+            <h1>Pangram Checker</h1>
+            <InputForm setSentence={setSentence} checkPangram={checkPangram} />
+            <Result isPangram={isPangram} />
+        </div>
+    );
+}
+
+export default App;
